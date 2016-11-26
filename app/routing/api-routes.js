@@ -59,7 +59,8 @@ module.exports = function(app){
 	//Save the user's data to the DB.  Has to occur AFTER the check, or the DB will always return that user as the bestMatch
 	friendlist.push(userData);
 
-
+	//Return a JSON with user's bestMatch.  This will be used by the HTML
+	response.json(bestMatch);
 
 	});
 };
